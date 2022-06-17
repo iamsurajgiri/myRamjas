@@ -14,7 +14,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -24,9 +24,6 @@ import com.canhub.cropper.CropImageView
 import com.canhub.cropper.options
 import com.devkeyapps.myramjas.databinding.ActivityLoginBinding
 import com.devkeyapps.myramjas.databinding.ProcessingDialogBinding
-import com.devkeyapps.myramjas.utils.compressBitmap
-import com.devkeyapps.myramjas.utils.toBitmap
-import com.devkeyapps.myramjas.utils.toUri
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
@@ -38,7 +35,6 @@ import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 class LoginActivity : AppCompatActivity() {
@@ -48,7 +44,8 @@ class LoginActivity : AppCompatActivity() {
         if (result.isSuccessful) {
             // use the returned uri
             val uriContent = result.uriContent
-            uriContent?.let { handleSendImage(it) }
+            binding.profileImageView.setImageURI(uriContent)
+            uriContent?.let { startThumbnailing(it) }
 
         } else {
             binding.saveBtn.isEnabled = true
@@ -137,6 +134,7 @@ class LoginActivity : AppCompatActivity() {
                 }
                 binding.layout1.visibility = View.GONE
                 binding.layout2.visibility = View.VISIBLE
+                binding.pinView.requestFocus()
                 PhoneAuthProvider.getInstance().verifyPhoneNumber(
                     phoneNumber,  // Phone number to verify
                     60,  // Timeout duration
@@ -196,8 +194,13 @@ class LoginActivity : AppCompatActivity() {
                 dialogVerifying!!.show()
                 binding.submit2.isEnabled = false
                 val credential =
-                    PhoneAuthProvider.getCredential(mVerificationId!!, verificationCode)
-                signInWithPhoneAuthCredential(credential)
+                    mVerificationId?.let { it1 -> PhoneAuthProvider.getCredential(it1, verificationCode) }
+                if (credential != null) {
+                    signInWithPhoneAuthCredential(credential)
+                }else{
+                    dialogVerifying?.dismiss()
+                    Toast.makeText(this, "Something went wrong! Retry", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -320,6 +323,7 @@ class LoginActivity : AppCompatActivity() {
                     checkUserExist()
                 } else {
                     dialogVerifying!!.dismiss()
+                    binding.submit2.isEnabled = true
                     Toast.makeText(this@LoginActivity, "Something went wrong", Toast.LENGTH_SHORT)
                         .show()
                     Log.w(
@@ -422,16 +426,6 @@ class LoginActivity : AppCompatActivity() {
 
 
 
-
-    private fun handleSendImage(resultUri: Uri) {
-        binding.profileImageView.setImageURI(resultUri)
-        val newUri = resultUri.toBitmap(this).compressBitmap(5).toUri(this)
-
-        startThumbnailing(newUri)
-
-    }
-
-
     //Start Reducing size of image by converting it into Thumbnails
     private fun startThumbnailing(
         uri: Uri?
@@ -470,6 +464,7 @@ class LoginActivity : AppCompatActivity() {
                 setAspectRatio(1,1)
                 setActivityTitle("Profile Picture")
                 setMaxZoom(4)
+                setOutputCompressQuality(10)
 
             }
         )
