@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "966267804702",
+    "project_id": "myramjascollege",
+    "storage_bucket": "myramjascollege.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966267804702:android:d1a3139d847b797c97620f",
+        "android_client_info": {
+          "package_name": "com.devkeyapps.myramjas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966267804702-tsqrrifnjn012iir63jj8e2sl4l79338.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devkeyapps.myramjas",
+            "certificate_hash": "374cc988db2933cddc7deb23f31df49b9ea3c279"
+          }
+        },
+        {
+          "client_id": "966267804702-tkpjhbuipfop89j9gebqc3er03svqvig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvkVTulkeg11r7udnEfOMNOA0CHB0zxOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966267804702-tkpjhbuipfop89j9gebqc3er03svqvig.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
