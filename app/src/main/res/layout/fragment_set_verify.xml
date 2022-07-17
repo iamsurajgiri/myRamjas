@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.SetVerifyFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitle="Step 1/5"
+        app:subtitleTextColor="@color/colorLight"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:text="Let's Quickly Verify You!"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/open_sans_bold"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/desc2"
+        android:text="We do not share events, news and society related information of our college with others. So, let's verify you!"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/muli_extralight"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/eight_dp"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="25dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/grey_bold"
+        android:layout_marginTop="@dimen/eight_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv0"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="Choose verification method"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <AutoCompleteTextView
+            android:id="@+id/verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:padding="12dp" />
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rollNoTIL"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:endIconDrawable="@drawable/ic_baseline_check_circle_24"
+        app:endIconMode="custom"
+        app:helperText="As per your ID Card e.g 2020/29/0129"
+        app:helperTextEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv0"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="@dimen/eight_dp"
+        tools:hint="Roll No.">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rollNoEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters|textNoSuggestions"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textAllCaps="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/verificationMethodTIL"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollNoTIL"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:visibility="gone"
+        android:hint="Choose verification process">
+
+        <AutoCompleteTextView
+            android:id="@+id/verificationMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationMethodTIL"
+        android:layout_marginStart="24dp"
+        android:visibility="gone"
+        android:layout_marginEnd="24dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv1"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Instant:"
+            android:textColor="@color/dark_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Instantly verify yourself by scanning ID Card's Barcode"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv3"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Prolonged:"
+            android:textColor="@color/red"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:text="We will contact you for the verification within 24 hours, untill then you can you use the app normally."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv3"
+            app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verificationStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:text="@string/pending_verification"
+            android:visibility="gone"
+            android:textColor="@color/orangeyell"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="SCAN"
+            app:layout_constraintTop_toBottomOf="@+id/verificationStatus" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:visibility="gone"
+            android:text="NEXT"
+            app:layout_constraintTop_toBottomOf="@+id/verificationStatus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

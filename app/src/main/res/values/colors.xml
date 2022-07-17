@@ -55,6 +55,7 @@
     <color name="color4">#59717c</color>
 
     <color name="dark_teal">#21c17a</color>
+    <color name="scanner_line">#00ceff</color>
 
     <color name="green">#b514be36</color>
     <color name="notif_green">#5ac65c</color>
@@ -100,6 +101,9 @@
     <color name="add_address_bg">#fff5f5f5</color>
     <color name="add_address_border">#ffe9e9e9</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="trasparent_blue">#554285F4</color>
+    <color name="blue">#4285F4</color>
+    <color name="dark_green">#0C6822</color>
 
 
 </resources>

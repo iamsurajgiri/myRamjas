@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:clickable="true"
+    android:layout_height="60dp"
+    android:id="@+id/rootView">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:civ_border_width="@dimen/dimen_1dp"
+        app:civ_border_color="@color/colorAccent"
+        android:layout_marginStart="@dimen/fab_margin"
+        tools:src="@drawable/profile_pic"
+        android:id="@+id/item_pic"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:textSize="16sp"
+        tools:text="Suraj Giri"
+        android:textStyle="bold"
+        android:id="@+id/item_name"/>
+
+</LinearLayout>

@@ -6,4 +6,89 @@
     <string name="name">Full Name</string>
     <string name="mobile_number">Mobile Number</string>
 
+    <string name="pointing_message">Point towards the card and take a picture</string>
+    <string name="ok">OK</string>
+    <string name="enter_roll">Enter Full Roll No.</string>
+    <string name="enter_ref">Enter Full Reference No.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="homestate">Homestate</string>
+    <string name="department">Department</string>
+    <string name="batch">Batch</string>
+    <string name="semester">Semester</string>
+    <string name="next">Next</string>
+    <string name="try_again">Try Again!</string>
+    <string name="add_your_social_media_handles">Add your social media handles</string>
+    <string name="verify_your_roll_no">Verify your roll no.</string>
+    <string name="roll_no">Roll No. or Registration No.</string>
+    <string name="verify_yourself">Verify yourself</string>
+    <string name="extracting_text">Extracting Text</string>
+    <string name="let_s_quickly_verify_you">Let\'s quickly verify you!</string>
+    <string name="rollno_method">Instantly verify yourself by scanning ID Card\'s Barcode</string>
+    <string name="refno_method">Instantly verify yourself by scanning Admission Acknowledgment Slip</string>
+    <string name="successfully_verified">Successfully Verified!</string>
+    <string name="failed_verification">Failed to Verify!</string>
+    <string name="pending_verification">Pending Verification!</string>
+    <string name="optional_socials">Why? Find and engage with like minded people having similar hobbies, interests and career aspirations.\nTotally optional!</string>
+    <string-array name="dept_list">
+        <item>B.A (Prog)</item>
+        <item>B.A (Hons) Economics</item>
+        <item>B.A (Hons) English</item>
+        <item>B.A (Hons) Hindi</item>
+        <item>B.A (Hons) Hindustani Music</item>
+        <item>B.A (Hons) History</item>
+        <item>B.A (Hons) Sanskrit</item>
+        <item>B.A (Hons) Percussion Music</item>
+        <item>B.A (Hons) Political Science</item>
+        <item>B.Com (Prog)</item>
+        <item>B.Com (Hons)</item>
+        <item>B.Sc. Physical Science Chemistry</item>
+        <item>B.Sc. Physical Science Electronics</item>
+        <item>B.Sc (Life Sciences)</item>
+        <item>B.Sc (Hons) Chemistry</item>
+        <item>B.Sc (Hons) Botany</item>
+        <item>B.Sc (Hons) Mathematics</item>
+        <item>B.Sc (Hons) Physics</item>
+        <item>B.Sc (Hons) Statistics</item>
+        <item>B.Sc (Hons) Zoology</item>
+    </string-array>
+    <string-array name="state_list">
+        <item>Andaman and Nicobar</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadar and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi/NCR</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Ladakh</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Puducherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
 </resources>

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.devkeyapps.myramjas">
+    package="delhi.university.ramjas.college">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- For CameraX example only -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,24 +20,40 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyRamjas"
-        tools:targetApi="31">
+        android:theme="@style/Theme.MyRamjas">
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr,barcode" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
         <activity
-            android:name=".LoginActivity"
+            android:name="delhi.university.ramjas.college.ui.activities.SetupActivity"
             android:exported="false"
-            android:theme="@style/ToolTheme"/>
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name="delhi.university.ramjas.college.ui.activities.LoginActivity"
+            android:exported="false"
+            android:theme="@style/ToolTheme"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="delhi.university.ramjas.college.ui.activities.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.canhub.cropper.CropImageActivity"
-            android:theme="@style/CropperTheme"/>
-
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/CropperTheme" />
     </application>
 
 </manifest>

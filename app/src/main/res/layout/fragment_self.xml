@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".ui.fragments.SelfFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:subtitle="Step 2/5"
+        app:subtitleTextColor="@color/colorLight"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorPrimary" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="64dp"
+        android:paddingBottom="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile_pic"
+            app:civ_border_color="@color/imageBorderColor"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginBottom="15.0dip"
+        android:hint="@string/name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginBottom="15.0dip"
+        android:hint="@string/mobile_number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="13" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/layoutPadding"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/continues"
+        android:textColor="#fff" />
+
+</LinearLayout>

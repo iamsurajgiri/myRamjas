@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightest_grey"
+    tools:context=".ui.fragments.SetThreeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitle="Step 5/5"
+        app:subtitleTextColor="@color/colorLight"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorPrimary" />
+    <TextView
+        android:id="@+id/desc"
+        android:text="Add You Socials"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/open_sans_bold"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/desc2"
+        android:text="@string/optional_socials"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/muli_extralight"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/eight_dp"
+        android:textSize="12sp"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/view"
+        android:background="@color/grey_bold"
+        android:layout_width="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/eight_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc2"
+        android:layout_height="1dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/wapCiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:src="@drawable/whatsapp_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/wapTil"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your WhatsApp number"
+        app:expandedHintEnabled="false"
+        app:helperText="Optional"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginEnd="@dimen/eight_dp"
+        app:helperTextEnabled="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wapCiv"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:prefixText="+91">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="12dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:src="@drawable/instagram_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wapTil" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til0"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_username"
+        app:expandedHintEnabled="false"
+        app:helperText="Optional"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginEnd="@dimen/eight_dp"
+        app:helperTextEnabled="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/civ0"
+        app:layout_constraintTop_toBottomOf="@+id/wapTil"
+        app:prefixText="instagram.com/">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:padding="12dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:src="@drawable/facebook_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_username"
+        app:expandedHintEnabled="false"
+        app:helperText="Optional"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginEnd="@dimen/eight_dp"
+        app:helperTextEnabled="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/civ1"
+        app:layout_constraintTop_toBottomOf="@+id/til0"
+        app:prefixText="facebook.com/">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:src="@drawable/twitter_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_username"
+        app:expandedHintEnabled="false"
+        app:helperText="Optional"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginEnd="@dimen/eight_dp"
+        app:helperTextEnabled="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/civ2"
+        app:layout_constraintTop_toBottomOf="@+id/til1"
+        app:prefixText="twitter.com/">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Next"
+        android:layout_marginBottom="@dimen/eight_dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

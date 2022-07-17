@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setup_graph"
+    app:startDestination="@id/setZeroFragment">
+
+    <fragment
+        android:id="@+id/setZeroFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetZeroFragment"
+        android:label="SetZeroFragment" >
+        <action
+            android:id="@+id/action_setZeroFragment_to_setVerifyFragment"
+            app:destination="@id/setVerifyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/setOneFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetOneFragment"
+        android:label="fragment_set_one"
+        tools:layout="@layout/fragment_set_one" >
+        <action
+            android:id="@+id/action_setOneFragment_to_setTwoFragment"
+            app:destination="@id/setTwoFragment" />
+
+        <action
+            android:id="@+id/action_setOneFragment_to_selfFragment"
+            app:destination="@id/selfFragment" />
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/setTwoFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetTwoFragment"
+        android:label="fragment_set_two"
+        tools:layout="@layout/fragment_set_two" >
+        <action
+            android:id="@+id/action_setTwoFragment_to_setThreeFragment"
+            app:destination="@id/setThreeFragment" />
+        <action
+            android:id="@+id/action_setTwoFragment_to_setOneFragment"
+            app:destination="@id/setOneFragment" />
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+    </fragment>
+    <fragment
+        android:id="@+id/setThreeFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetThreeFragment"
+        android:label="fragment_set_three"
+        tools:layout="@layout/fragment_set_three" >
+        <action
+            android:id="@+id/action_setThreeFragment_to_setTwoFragment"
+            app:destination="@id/setTwoFragment" />
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+        <action
+            android:id="@+id/action_setThreeFragment_to_setFourFragment"
+            app:destination="@id/setFourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setFourFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetFourFragment"
+        android:label="fragment_set_four"
+        tools:layout="@layout/fragment_set_four" >
+        <action
+            android:id="@+id/action_setFourFragment_to_setThreeFragment"
+            app:destination="@id/setThreeFragment" />
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+        <action
+            android:id="@+id/action_setFourFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.CameraFragment"
+        android:label="CameraFragment" >
+        <action
+            android:id="@+id/action_cameraFragment_to_setVerificationStatusFragment"
+            app:destination="@id/setVerificationStatusFragment"
+            app:popUpTo="@id/cameraFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/setVerifyFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetVerifyFragment"
+        android:label="fragment_set_verify"
+        tools:layout="@layout/fragment_set_verify" >
+        <action
+            android:id="@+id/action_setVerifyFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:popUpTo="@id/setVerifyFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_setVerifyFragment_to_barcodeFragment"
+            app:destination="@id/barcodeFragment"
+            app:popUpTo="@id/setVerifyFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_setVerifyFragment_to_selfFragment"
+            app:destination="@id/selfFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/setVerificationStatusFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetVerificationStatusFragment"
+        android:label="fragment_set_verification_status"
+        tools:layout="@layout/fragment_set_verification_status" >
+        <action
+            android:id="@+id/action_setVerificationStatusFragment_to_setZeroFragment"
+            app:destination="@id/setZeroFragment"
+            app:popUpTo="@id/setVerificationStatusFragment"
+            app:popUpToInclusive="true"/>
+
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+
+        <action
+            android:id="@+id/action_setVerificationStatusFragment_to_selfFragment"
+            app:destination="@id/selfFragment"
+            app:popUpTo="@id/setVerificationStatusFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/barcodeFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.BarcodeFragment"
+        android:label="fragment_barcode"
+        tools:layout="@layout/fragment_barcode" >
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+
+        <action
+            android:id="@+id/action_barcodeFragment_to_setVerificationStatusFragment"
+            app:destination="@id/setVerificationStatusFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/barcodeFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/selfFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SelfFragment"
+        android:label="fragment_self"
+        tools:layout="@layout/fragment_self" >
+        <action
+            android:id="@+id/action_selfFragment_to_setOneFragment"
+            app:destination="@id/setOneFragment" />
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="delhi.university.ramjas.college.ui.activities.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

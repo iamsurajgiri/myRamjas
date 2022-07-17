@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:966267804702:android:d1a3139d847b797c97620f",
+        "mobilesdk_app_id": "1:966267804702:android:8e2573eec3cdb7e397620f",
         "android_client_info": {
-          "package_name": "com.devkeyapps.myramjas"
+          "package_name": "delhi.university.ramjas.college"
         }
       },
       "oauth_client": [
         {
-          "client_id": "966267804702-tsqrrifnjn012iir63jj8e2sl4l79338.apps.googleusercontent.com",
+          "client_id": "966267804702-acatdnm31dn42r4lr4384uqgeev1cmef.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.devkeyapps.myramjas",
+            "package_name": "delhi.university.ramjas.college",
             "certificate_hash": "374cc988db2933cddc7deb23f31df49b9ea3c279"
           }
         },
