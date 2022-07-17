@@ -29,7 +29,7 @@
     <string name="successfully_verified">Successfully Verified!</string>
     <string name="failed_verification">Failed to Verify!</string>
     <string name="pending_verification">Pending Verification!</string>
-    <string name="optional_socials">Why? Find and engage with like minded people having similar hobbies, interests and career aspirations.\nTotally optional!</string>
+    <string name="optional_social">Why? Find and engage with like minded people having similar hobbies, interests and career aspirations.\nTotally optional!</string>
     <string-array name="dept_list">
         <item>B.A (Prog)</item>
         <item>B.A (Hons) Economics</item>
