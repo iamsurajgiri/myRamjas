@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ui.fragments.OthersFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBodyColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/top_view_margin"
+        android:paddingBottom="@dimen/layoutPadding"
+        android:paddingEnd="@dimen/layoutPadding"
+        android:paddingStart="@dimen/layoutPadding">
+
+        <TextView
+            style="@style/viewParent.headerText"
+            android:text="@string/others" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileCircleImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/imageBorderColor"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/profile_pic" />
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                style="@style/viewParent.headerText"
+                android:textSize="18sp"
+                android:text="@string/please_wait"
+                android:layout_toEndOf="@id/profileCircleImageView"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/phonenumber"
+                style="@style/viewParent.headerText"
+                android:textSize="16sp"
+                android:text="@string/loading"
+                android:textColor="#5D5C5C"
+                android:layout_below="@id/usernameTextView"
+                android:layout_toEndOf="@id/profileCircleImageView" />
+
+            <ImageView
+                style="@style/viewParent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_more" />
+
+        </RelativeLayout>
+
+        <!--        <Switch-->
+        <!--            android:id="@+id/darkModeSwitch"-->
+        <!--            style="@style/settingsText"-->
+        <!--            android:drawableLeft="@drawable/ic_dark_mode"-->
+        <!--            android:text="Dark Mode" /> TODO use this to enable Dark Mode later-->
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="@string/profile" />
+
+        <TextView
+            android:id="@+id/profile"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:text="@string/edit_profile"
+            app:drawableStartCompat="@drawable/ic_edit_profile" />
+
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="@string/notifications" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            style="@style/settingsText"
+            android:checked="true"
+            android:drawableStart="@drawable/ic_notifications"
+            android:text="@string/notifications" />
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="@string/regional" />
+
+        <TextView
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:text="@string/language"
+            app:drawableStartCompat="@drawable/ic_languages" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:text="@string/logout"
+            app:drawableStartCompat="@drawable/ic_logout" />
+
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="@string/app_ver_1_0_0"
+            android:paddingBottom="30dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+</ScrollView>

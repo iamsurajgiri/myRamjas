@@ -166,7 +166,7 @@ class SetTwoFragment : Fragment() {
                 val bundle = bundleOf(
                     "setupParcel" to setupParcel
                 )
-                findNavController().navigate(R.id.action_setTwoFragment_to_setThreeFragment, bundle)
+                findNavController().navigate(R.id.action_setTwoFragment_to_setFinalFragment, bundle)
             } else {
                 binding.root.snack("Something went wrong or missing!", mContext)
             }

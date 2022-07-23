@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/lightest_grey"
-    tools:context=".ui.fragments.SetThreeFragment">
+    tools:context=".ui.fragments.SetFinalFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -95,7 +95,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="phone"
+            android:maxLength="10"
             android:padding="12dp" />
 
     </com.google.android.material.textfield.TextInputLayout>

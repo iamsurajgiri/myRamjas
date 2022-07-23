@@ -56,12 +56,15 @@ class SetVerificationStatusFragment : Fragment() {
 
         if (setupParcel.verification == "success") {
             binding.verificationStatus.text = getString(R.string.successfully_verified)
+            binding.gif.setImageResource(R.drawable.verified)
             binding.next.text = getString(R.string.next)
             binding.root.setBackgroundColor(resources.getColor(R.color.dark_green, null))
         } else {
             binding.verificationStatus.text = getString(R.string.failed_verification)
+            binding.gif.setImageResource(R.drawable.failed)
             binding.root.setBackgroundColor(resources.getColor(R.color.orangeDark, null))
             binding.next.text = getString(R.string.try_again)
+            binding.prolonged.visibility = View.VISIBLE
         }
         binding.next.setOnClickListener {
             if (setupParcel.verification == "success") {

@@ -30,6 +30,20 @@
     <string name="failed_verification">Failed to Verify!</string>
     <string name="pending_verification">Pending Verification!</string>
     <string name="optional_social">Why? Find and engage with like minded people having similar hobbies, interests and career aspirations.\nTotally optional!</string>
+    <string name="home">Home</string>
+    <string name="events">Events</string>
+    <string name="academics">Academics</string>
+    <string name="others" >Others</string>
+
+
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="manage_address">Manage Address</string>
+    <string name="notifications">Notifications</string>
+    <string name="regional">Regional</string>
+    <string name="language">Language</string>
+    <string name="logout">Logout</string>
+    <string name="app_ver_1_0_0">App ver 1.0.0</string>
     <string-array name="dept_list">
         <item>B.A (Prog)</item>
         <item>B.A (Hons) Economics</item>

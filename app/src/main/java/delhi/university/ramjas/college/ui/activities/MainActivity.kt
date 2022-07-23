@@ -4,12 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
+import delhi.university.ramjas.college.R
 import delhi.university.ramjas.college.databinding.ActivityMainBinding
 import delhi.university.ramjas.college.prefs.DarkModePrefManager
+import delhi.university.ramjas.college.ui.fragments.AcademicsFragment
+import delhi.university.ramjas.college.ui.fragments.EventsFragment
+import delhi.university.ramjas.college.ui.fragments.HomeFragment
+import delhi.university.ramjas.college.ui.fragments.OthersFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +26,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
     private var mCurrentUser: FirebaseUser? = null
     private lateinit var mUserCollection: CollectionReference
+
+
+    //Fragments
+    private lateinit var homeFragment: HomeFragment
+    private lateinit var eventsFragment: EventsFragment
+    private lateinit var academicsFragment: AcademicsFragment
+    private lateinit var othersFragment: OthersFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //Firebase
@@ -45,6 +58,44 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        binding.mainBottomNav.background = null
+        binding.mainBottomNav.menu.getItem(2).isEnabled = false
+        homeFragment = HomeFragment()
+        eventsFragment = EventsFragment()
+        academicsFragment = AcademicsFragment()
+        othersFragment = OthersFragment()
+
+        binding.mainBottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homes -> {
+                    replaceFragment(homeFragment)
+                    true
+                }
+                R.id.events -> {
+                    replaceFragment(eventsFragment)
+                    true
+                }
+                R.id.academics -> {
+                    replaceFragment(academicsFragment)
+                    true
+                }
+                R.id.others -> {
+                    replaceFragment(othersFragment)
+                    true
+                }
+                else -> false
+            }
+        }
+        binding.mainBottomNav.selectedItemId = R.id.homes
+
+    }
+
+    //Sets fragment
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentTransaction =
+            supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.main_container, fragment)
+        fragmentTransaction.commit()
     }
 
     //checking is user is setup or not

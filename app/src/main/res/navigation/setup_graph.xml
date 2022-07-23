@@ -37,38 +37,20 @@
         android:label="fragment_set_two"
         tools:layout="@layout/fragment_set_two" >
         <action
-            android:id="@+id/action_setTwoFragment_to_setThreeFragment"
-            app:destination="@id/setThreeFragment" />
-        <action
             android:id="@+id/action_setTwoFragment_to_setOneFragment"
             app:destination="@id/setOneFragment" />
         <argument
             android:name="setupParcel"
             app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
-    </fragment>
-    <fragment
-        android:id="@+id/setThreeFragment"
-        android:name="delhi.university.ramjas.college.ui.fragments.SetThreeFragment"
-        android:label="fragment_set_three"
-        tools:layout="@layout/fragment_set_three" >
         <action
-            android:id="@+id/action_setThreeFragment_to_setTwoFragment"
-            app:destination="@id/setTwoFragment" />
-        <argument
-            android:name="setupParcel"
-            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
-        <action
-            android:id="@+id/action_setThreeFragment_to_setFourFragment"
-            app:destination="@id/setFourFragment" />
+            android:id="@+id/action_setTwoFragment_to_setFinalFragment"
+            app:destination="@id/setFinalFragment" />
     </fragment>
     <fragment
         android:id="@+id/setFourFragment"
         android:name="delhi.university.ramjas.college.ui.fragments.SetFourFragment"
         android:label="fragment_set_four"
         tools:layout="@layout/fragment_set_four" >
-        <action
-            android:id="@+id/action_setFourFragment_to_setThreeFragment"
-            app:destination="@id/setThreeFragment" />
         <argument
             android:name="setupParcel"
             app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
@@ -168,4 +150,19 @@
         android:name="delhi.university.ramjas.college.ui.activities.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/setFinalFragment"
+        android:name="delhi.university.ramjas.college.ui.fragments.SetFinalFragment"
+        android:label="SetFinalFragment" >
+        <action
+            android:id="@+id/action_setFinalFragment_to_setFourFragment"
+            app:destination="@id/setFourFragment" />
+        <action
+            android:id="@+id/action_setFinalFragment_to_setTwoFragment"
+            app:destination="@id/setTwoFragment" />
+        <argument
+            android:name="setupParcel"
+            app:argType="delhi.university.ramjas.college.parcels.SetupParcel" />
+
+    </fragment>
 </navigation>

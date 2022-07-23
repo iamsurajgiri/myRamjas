@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homes"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/events"
+        android:icon="@drawable/events"
+        android:title="@string/events" />
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
+    <item
+        android:id="@+id/academics"
+        android:icon="@drawable/academics"
+        android:title="@string/academics" />
+    <item
+        android:id="@+id/others"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title="@string/others" />
+</menu>

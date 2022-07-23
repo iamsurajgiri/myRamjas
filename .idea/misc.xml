@@ -3,12 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable-night/ic_more.xml" value="0.103" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/academics.xml" value="0.103" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.1565" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/button_main_background.xml" value="0.101" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/card_gradient.xml" value="0.103" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/events.xml" value="0.103" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1565" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.1565" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_camera.xml" value="0.103" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_edit_profile.xml" value="0.1565" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_form.xml" value="0.103" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_home.xml" value="0.1565" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_languages.xml" value="0.1565" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_logout.xml" value="0.1565" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_more.xml" value="0.103" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_notifications.xml" value="0.1565" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/ic_order.xml" value="0.1565" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/instagram_icon.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/drawable/main_gradient.xml" value="0.101" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/font/alfa_slab_one.xml" value="0.19074074074074074" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/font/muli_extralight.xml" value="0.19074074074074074" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/font/open_sans_bold.xml" value="0.19074074074074074" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/activity_barcode.xml" value="0.1796875" />
@@ -17,11 +31,17 @@
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/activity_main.xml" value="0.165625" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/activity_setup.xml" value="0.16666666666666666" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/custom_progress_dialog.xml" value="0.17864583333333334" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_academics.xml" value="0.1796875" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_barcode.xml" value="0.1796875" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_camera.xml" value="0.1796875" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_camera2.xml" value="0.1796875" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_events.xml" value="0.1796875" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_home.xml" value="0.1796875" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_others.xml" value="0.1796875" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_self.xml" value="0.1796875" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_set_final.xml" value="0.1796875" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_set_four.xml" value="0.1796875" />
-        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_set_one.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_set_one.xml" value="0.14666666666666667" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_set_three.xml" value="0.1796875" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_set_two.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/fragment_set_verification_status.xml" value="0.1796875" />
@@ -30,6 +50,7 @@
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/list_item.xml" value="0.1796875" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/processing_dialog.xml" value="0.1796875" />
         <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/layout/text_item_layout.xml" value="0.17864583333333334" />
+        <entry key="..\:/AndroidProjects/myRamjas/app/src/main/res/menu/bottom_menu.xml" value="0.1796875" />
       </map>
     </option>
   </component>
